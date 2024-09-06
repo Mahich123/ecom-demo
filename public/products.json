@@ -1,0 +1,57 @@
+
+[
+    {
+        "id":1,
+        "image": "/chairs/recliner.png",
+        "name": "Recliner Chair Wood",
+        "discounted": "299.00",
+        "price": "350.00",
+        "percent": "30% OFF"
+        
+    },
+    {
+        "id":2,
+        "image": "/chairs/timber.png",
+        "name": "Timber Ride Padded",
+        "discounted": "59.00",
+        "price": "75.00",
+        "percent": "30% OFF"
+       
+    },
+    {
+        "id":3,
+        "image": "/chairs/colored.png",
+        "name": "Colored Wooden Chair",
+        "discounted": "299.00",
+        "price": "350.00",
+        "percent": "30% OFF"
+       
+    },
+    {
+        "id":4,
+        "image": "/chairs/blank_bamboo.png",
+        "name": "Blank Bamboo Wicker",
+        "discounted": "299.00",
+        "price": "350.00",
+        "percent": "30% OFF"
+      
+    },
+    {
+        "id":5,
+        "image": "/chairs/isolated.png",
+        "name": "Isolated Wooden Rock",
+        "discounted": "165.00",
+        "price": "400.00",
+        "percent": "30% OFF"
+       
+    },
+    {
+        "id":6,
+        "image": "/chairs/minimal.png",
+        "name": "Minimal Empty Rocking",
+        "discounted": "299.00",
+        "price": "350.00",
+        "percent": "30% OFF"
+       
+    }
+]
