@@ -39,7 +39,7 @@ export default function Cart() {
               </RenderProducts>
             </div>
 
-            {/* Order Summary */}
+           
             <Order />
           </>
         )}

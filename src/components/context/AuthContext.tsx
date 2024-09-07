@@ -45,6 +45,7 @@ export const AuthProvider = ({ children }: Props) => {
   const [session, setSession] = useState(false);
   const [cartItem, setCartItem] = useState<Record<number, number>>({});
   const [totalAmount, setTotalAmount] = useState(0)
+  
 
   const { data } = FetchProducts();
 
@@ -105,15 +106,27 @@ export const AuthProvider = ({ children }: Props) => {
   // console.log("user", user);
 
   const signUp = (userData: userData) => {
+    const user = JSON.parse(localStorage.getItem("user") || "[]")
+
+    const existingUser = user.find((user: userData) => user.email === userData.email)
+    
+    if(existingUser) {
+     throw new Error("email already registered")
+    
+    }
+
+    user.push(userData)
     localStorage.setItem("user", JSON.stringify(userData));
+    
     setUser(userData);
     setSession(true);
   };
 
   const signOut = () => {
-    setSession(false)
-  }
-
+    localStorage.removeItem("user");
+    setUser(null);
+    setSession(false);
+  };
   // console.log("session", session);
   console.log("CartItems", cartItem)
 

@@ -19,10 +19,20 @@ export default function SignUp() {
         password: ""
     })
 
+    const [message, setMessage] = useState("")
+
     const handleForm =  (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        setMessage("")
 
-        signUp(userData)
+        try {
+          signUp(userData)
+        } catch (error) {
+          if(error) {
+            setMessage("already registered")
+          }
+        }
+      
     }
 
     const handleChange = (e:  React.ChangeEvent<HTMLInputElement>) => {
@@ -31,6 +41,8 @@ export default function SignUp() {
       };
 
   return (
+
+    
     <div className="flex h-screen">
       <div className="flex flex-col justify-center items-center w-full lg:w-1/2 p-10 shadow-lg space-y-8">
         <div className="bg-[#F5F5F5] p-8 rounded">
@@ -93,6 +105,12 @@ export default function SignUp() {
                 required
               />
             </div>
+
+            {
+              message && (
+                <p className="text-red-500">{message}</p>
+              )
+            }
             <Button type="submit" className="w-full barlow-semibold">
               Sign Up
             </Button>
