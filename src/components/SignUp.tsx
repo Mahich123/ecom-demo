@@ -96,14 +96,7 @@ export default function SignUp() {
             <Button type="submit" className="w-full barlow-semibold">
               Sign Up
             </Button>
-            <div className="flex items-center gap-2">
-              <Button variant="outline" className="flex-1">
-                Sign up with Google
-              </Button>
-              <Button variant="outline" className="flex-1">
-                Sign up with Apple
-              </Button>
-            </div>
+            
             <p className="text-center barlow-medium">
               Have an account?
               <span className="text-[#0F3DDE] cursor-pointer">Sign In</span>

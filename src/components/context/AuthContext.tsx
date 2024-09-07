@@ -17,6 +17,7 @@ type ContextProps = {
   removeProduct: (id: number) => void;
   totalItem: number;
   totalAmount: number;
+  signOut: () => void;
 };
 
 type Product = {
@@ -109,11 +110,14 @@ export const AuthProvider = ({ children }: Props) => {
     setSession(true);
   };
 
+  const signOut = () => {
+    setSession(false)
+  }
 
   // console.log("session", session);
   console.log("CartItems", cartItem)
 
-  const contextValue = { user, signUp, session, cartItem, addProduct, removeProduct, totalItem, totalAmount}
+  const contextValue = { user, signUp, session, cartItem, addProduct, removeProduct, totalItem, totalAmount, signOut}
   return (
     <AuthContext.Provider value={ contextValue}>
       {children}
