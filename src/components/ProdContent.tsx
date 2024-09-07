@@ -7,12 +7,12 @@ export default function ProdContent() {
   const { data, loading } = FetchProducts();
 
   return (
-    <div className="flex mt-28 ml-[14rem]">
+    <div className="flex mt-28 justify-center ">
       <SideBar />
       {loading ? (
         <p>Loading ...</p>
       ) : (
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3">
           <RenderProducts data={data}>
             {(product) => (
               <Cards

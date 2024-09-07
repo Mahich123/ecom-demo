@@ -1,6 +1,6 @@
 export default function SideBar() {
     return (
-      <div className="barlow-semibold flex items-start w-[16rem] mr-[13rem]">
+      <div className="hidden barlow-semibold md:flex md:items-start w-[16rem] mr-[13rem]">
         <div className=" flex flex-col gap-y-8 w-[13rem]"> 
           <p>Rocking chair</p>
           <p>Side chair</p>

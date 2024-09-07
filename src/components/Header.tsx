@@ -8,12 +8,12 @@ export default function Header() {
   const {totalItem, signOut} = useAuth()
  
   return (
-    <div className="flex items-center justify-around mt-6">
+    <div className="flex items-center justify-between px-4 md:justify-around mt-6">
       <div>
         <img src={logo} alt="logo" />
       </div>
 
-      <div className="flex gap-x-8 barlow-medium ">
+      <div className="hidden md:flex md:gap-x-8 md:barlow-medium ">
         <p>Home</p>
         <p>Products</p>
         <p>Categories</p>
